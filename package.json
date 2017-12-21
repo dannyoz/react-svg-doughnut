@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/dannyoz/react-svg-doughnut/issues"
   },
-  "homepage": "https://github.com/dannyoz/react-svg-doughnut#readme"
+  "homepage": "https://github.com/dannyoz/react-svg-doughnut#readme",
+  "dependencies": {
+    "react": "^16.2.0"
+  }
 }
