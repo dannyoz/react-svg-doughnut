@@ -1,4 +1,5 @@
 import React from 'react';
+import calculatePathShape from './calculate-path-shape';
 
 class SvgDoughnut extends React.Component {
 
@@ -67,32 +68,6 @@ class SvgDoughnut extends React.Component {
 		};
 	}
 
-	calculatePathShape(percentage) {
-		const PI = Math.PI;
-		const cos = Math.cos;
-		const sin = Math.sin;
-		const centerY = this.size / 2;
-		const centerX = this.size / 2;
-		const radius = (this.size / 2) - this.width;
-		const startAngle = - 90;
-		const startRadians = startAngle * PI / 180;
-		const endAngle = percentage * 3.6 - 90;
-		const endRadians = (endAngle - 0.0001) * PI / 180;
-		const largeArc = ((endRadians - startRadians) % (PI * 2)) > PI ? 1 : 0;
-		const startX = centerX + cos(startRadians) * radius;
-		const startY = centerY + sin(startRadians) * radius;
-		const endX = centerX + cos(endRadians) * radius;
-		const endY = centerY + sin(endRadians) * radius;
-
-		const attrString = [
-			'M', startX, startY,
-			'A', radius, radius, 0,
-			largeArc, 1, endX, endY
-		].join(' ');
-		
-		return String(attrString);
-	}
-
 	render() {
 		return(
 			<div style={Object.assign({}, this.svgStyle, {position: 'relative'})}>
@@ -104,13 +79,13 @@ class SvgDoughnut extends React.Component {
 						style={Object.assign({}, this.sharedStyles , this.circleStyle )}>
 					</circle>
 					<path
-						d={this.calculatePathShape(this.state.appliedPercentage)}
+						d={calculatePathShape(this.state.appliedPercentage, this.size, this.width)}
 						style={Object.assign({}, this.sharedStyles , this.pathStyle )}>
 					</path>
 				</svg>
 				<div style={Object.assign({}, this.textWrapperStyle )}>
 					<p style={Object.assign({}, this.textStyle , {marginBottom: 0})} >{`${this.state.appliedPercentage}%`}</p>
-					<p style={{marginBottom: 0}}>Awesome</p>
+					<p style={{marginBottom: 0}}>Awesome!</p>
 				</div>
 			</div>
 		);
