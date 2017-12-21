@@ -1,0 +1,23 @@
+{
+  "name": "react-svg-doughnut",
+  "version": "0.0.1",
+  "description": "A React component for SVG doughnut charts made easy!",
+  "main": "src/react-svg-doughnut.js",
+  "scripts": {
+    "test": "run_tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dannyoz/react-svg-doughnut.git"
+  },
+  "keywords": [
+    "React",
+    "SVG"
+  ],
+  "author": "dannyoz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dannyoz/react-svg-doughnut/issues"
+  },
+  "homepage": "https://github.com/dannyoz/react-svg-doughnut#readme"
+}
