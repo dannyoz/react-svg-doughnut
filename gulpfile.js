@@ -13,6 +13,7 @@ gulp.task('browserify', function () {
 
 gulp.task('watch', function () {
     gulp.watch('./env/src/**/*.js', ['browserify']);
+    gulp.watch('./src/**/*.*', ['browserify']);
 });
 
 gulp.task('default',  ['browserify']);
