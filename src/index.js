@@ -1,6 +1,7 @@
 import React from 'react';
 import calculatePathShape from './calculate-path-shape';
 import generateStyles from './generate-styles';
+import stepDuration from './step-duration';
 
 class SvgDoughnut extends React.Component {
 
@@ -12,19 +13,29 @@ class SvgDoughnut extends React.Component {
         };
 
         this.styles = generateStyles(this.props.settings);
-        this.size = this.props.size || 150;
+        this.size = this.props.settings.size || 150;
         this.percentage = this.props.percentage || 0;
+        this.animationDuration = this.props.settings.animationDuration;
     }
 
     componentDidMount() {
-        const self = this;
+        if (this.animationDuration || this.animationDuration > 0) {
+            this.animate();
+        } else {
+            this.setState({
+                appliedPercentage: this.percentage
+            });
+        }
+    }
 
+    animate() {
+        const self = this;
         for(let i = 0; i < (this.percentage + 1); i++){
             setTimeout(() => {
                 self.setState({
                     appliedPercentage: i
                 });
-            }, i * 25);
+            }, i * stepDuration(this.percentage, this.animationDuration));
         };
     }
 
@@ -44,8 +55,8 @@ class SvgDoughnut extends React.Component {
                     </path>
                 </svg>
                 <div style={Object.assign({}, this.styles.textWrapperStyle )}>
-                    <p style={Object.assign({}, this.styles.textStyle , {margin: 0})} >{`${this.state.appliedPercentage}%`}</p>
-                    <p style={{margin: 0}}>Awesome!</p>
+                    <p style={Object.assign({}, this.styles.percentageTextStyle)} >{`${this.state.appliedPercentage}%`}</p>
+                    {this.props.label && <p style={Object.assign({}, this.styles.labelTextStyle)}>{this.props.label}</p>}
                 </div>
             </div>
         );
