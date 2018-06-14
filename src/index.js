@@ -41,7 +41,7 @@ class SvgDoughnut extends React.Component {
 
     render() {
         return(
-            <div style={Object.assign({}, this.styles.svgStyle, {position: 'relative'})}>
+            <div className="react-svg-doughnut" style={Object.assign({}, this.styles.svgStyle, {position: 'relative'})}>
                 <svg viewBox={`0 0 ${this.size} ${this.size}`}>
                     <circle
                         cx="50%"
