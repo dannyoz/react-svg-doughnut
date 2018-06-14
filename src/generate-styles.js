@@ -1,4 +1,4 @@
-export default (settings) => {
+module.exports = (settings) => {
 	return {
 		svgStyle: {
             width: `${settings.size}px`,

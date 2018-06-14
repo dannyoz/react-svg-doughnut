@@ -1,9 +1,9 @@
-import React from 'react';
-import calculatePathShape from './calculate-path-shape';
-import generateStyles from './generate-styles';
-import stepDuration from './step-duration';
+const react = require('react');
+const calculatePathShape = require('./calculate-path-shape');
+const generateStyles = require('./generate-styles');
+const stepDuration = require('./step-duration');
 
-class SvgDoughnut extends React.Component {
+class SvgDoughnut extends react.Component {
 
     constructor(props) {
         super(props);
@@ -41,26 +41,26 @@ class SvgDoughnut extends React.Component {
 
     render() {
         return(
-            <div className="react-svg-doughnut" style={Object.assign({}, this.styles.svgStyle, {position: 'relative'})}>
-                <svg viewBox={`0 0 ${this.size} ${this.size}`}>
-                    <circle
-                        cx="50%"
-                        cy="50%"
-                        r={(this.size / 2) - this.props.settings.thickness}
-                        style={Object.assign({}, this.styles.sharedStyles , this.styles.circleStyle )}>
-                    </circle>
-                    <path
-                        d={calculatePathShape(this.state.appliedPercentage, this.size, this.props.settings.thickness)}
-                        style={Object.assign({}, this.styles.sharedStyles , this.styles.pathStyle )}>
-                    </path>
-                </svg>
-                <div style={Object.assign({}, this.styles.textWrapperStyle )}>
-                    <p style={Object.assign({}, this.styles.percentageTextStyle)} >{`${this.state.appliedPercentage}%`}</p>
-                    {this.props.label && <p style={Object.assign({}, this.styles.labelTextStyle)}>{this.props.label}</p>}
-                </div>
-            </div>
+            React.createElement("div", {className: "react-svg-doughnut", style: Object.assign({}, this.styles.svgStyle, {position: 'relative'})}, 
+                React.createElement("svg", {viewBox: `0 0 ${this.size} ${this.size}`}, 
+                    React.createElement("circle", {
+                        cx: "50%", 
+                        cy: "50%", 
+                        r: (this.size / 2) - this.props.settings.thickness, 
+                        style: Object.assign({}, this.styles.sharedStyles , this.styles.circleStyle)}
+                    ), 
+                    React.createElement("path", {
+                        d: calculatePathShape(this.state.appliedPercentage, this.size, this.props.settings.thickness), 
+                        style: Object.assign({}, this.styles.sharedStyles , this.styles.pathStyle)}
+                    )
+                ), 
+                React.createElement("div", {style: Object.assign({}, this.styles.textWrapperStyle)}, 
+                    React.createElement("p", {style: Object.assign({}, this.styles.percentageTextStyle)}, `${this.state.appliedPercentage}%`), 
+                    this.props.label && React.createElement("p", {style: Object.assign({}, this.styles.labelTextStyle)}, this.props.label)
+                )
+            )
         );
     }
 };
 
-export default SvgDoughnut;
+module.exports = SvgDoughnut;

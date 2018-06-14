@@ -1,4 +1,4 @@
-export default (percentage, size, thickness) => {
+module.exports = (percentage, size, thickness) => {
     const PI = Math.PI;
     const cos = Math.cos;
     const sin = Math.sin;

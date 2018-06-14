@@ -1,3 +1,3 @@
-export default (percentage, duration) => {
+module.exports = (percentage, duration) => {
 	return duration / percentage;
 };
