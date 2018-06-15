@@ -1,9 +1,9 @@
-const react = require('react');
+const React = require('react');
 const calculatePathShape = require('./calculate-path-shape');
 const generateStyles = require('./generate-styles');
 const stepDuration = require('./step-duration');
 
-class SvgDoughnut extends react.Component {
+class SvgDoughnut extends React.Component {
 
     constructor(props) {
         super(props);
@@ -16,6 +16,7 @@ class SvgDoughnut extends react.Component {
         this.size = this.props.settings.size || 150;
         this.percentage = this.props.percentage || 0;
         this.animationDuration = this.props.settings.animationDuration;
+        this.labelText = this.props.settings.labelText;
     }
 
     componentDidMount() {
@@ -56,7 +57,7 @@ class SvgDoughnut extends react.Component {
                 ), 
                 React.createElement("div", {style: Object.assign({}, this.styles.textWrapperStyle)}, 
                     React.createElement("p", {style: Object.assign({}, this.styles.percentageTextStyle)}, `${this.state.appliedPercentage}%`), 
-                    this.props.label && React.createElement("p", {style: Object.assign({}, this.styles.labelTextStyle)}, this.props.label)
+                    this.labelText && React.createElement("p", {style: Object.assign({}, this.styles.labelTextStyle)}, this.labelText)
                 )
             )
         );

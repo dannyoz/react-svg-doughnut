@@ -20,8 +20,7 @@ gulp.task('reactify', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch('./env/src/**/*.js', ['browserify']);
-    gulp.watch('./src/**/*.*', ['browserify']);
+    gulp.watch('./src/**/*.*', ['reactify', 'browserify']);
 });
 
 var bump = gulp.task('bump', function(){
