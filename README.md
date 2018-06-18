@@ -11,7 +11,7 @@ React SVG doughnut can be downloaded via NPM:
 
 Example of basic Usage:
 
-`import React from 'react';
+```import React from 'react';
 import ReactDOM from 'react-dom';
 import SvgDoughnut from 'react-svg-doughnut';
 
@@ -35,4 +35,4 @@ class Example extends React.Component {
 ReactDOM.render(
     <Example />,
     document.getElementById('app')
-);`
+);```
