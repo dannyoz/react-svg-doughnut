@@ -1,7 +1,7 @@
 const React = require('react');
-const calculatePathShape = require('./calculate-path-shape');
-const generateStyles = require('./generate-styles');
-const stepDuration = require('./step-duration');
+const calculatePathShape = require('./utils/calculate-path-shape');
+const generateStyles = require('./utils/generate-styles');
+const stepDuration = require('./utils/step-duration');
 
 class SvgDoughnut extends React.Component {
 
