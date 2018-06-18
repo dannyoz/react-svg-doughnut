@@ -23,7 +23,7 @@ gulp.task('watch', function () {
     gulp.watch('./src/**/*.*', ['reactify', 'browserify']);
 });
 
-var bump = gulp.task('bump', function(){
+gulp.task('bump', function(){
     
     var files = ['./package.json']
 

@@ -1,6 +1,7 @@
 const React = require('react');
 const calculatePathShape = require('./utils/calculate-path-shape');
 const generateStyles = require('./utils/generate-styles');
+const configure = require('./utils/configure');
 const stepDuration = require('./utils/step-duration');
 
 class SvgDoughnut extends React.Component {
@@ -17,6 +18,8 @@ class SvgDoughnut extends React.Component {
         this.percentage = this.props.percentage || 0;
         this.animationDuration = this.props.settings.animationDuration;
         this.labelText = this.props.settings.labelText;
+        this.settings = configure(this.props.settings);
+        console.log(this.settings);
     }
 
     componentDidMount() {
