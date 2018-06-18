@@ -5,9 +5,15 @@ A flexible, lightweight React component for SVG doughnut charts made easy!
 
 ---
 
-### Installation
+## Installation
 
-React SVG doughnut can be downloaded via NPM:
+React SVG doughnut can be downloaded with yarn:
+
+```
+yarn add react-svg-doughnut
+```
+
+Or via NPM:
 
 ```
 npm install react-svg-doughnut --save
