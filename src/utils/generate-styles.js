@@ -9,10 +9,10 @@ module.exports = (settings) => {
             strokeWidth: `${settings.thickness}px` || '5px',
         },
         circleStyle: {
-            stroke: settings.circleColor || 'rgba(0, 0, 0, 0.15)',
+            stroke: settings.ringColour || '#DDD',
         },
         pathStyle: {
-            stroke: settings.pathColor || 'rgb(231, 83, 79)',
+            stroke: settings.primaryColour || '#e7534f',
         },
         textWrapperStyle: {
             fontFamily: settings.fontFamily || 'sans-serif',
@@ -25,13 +25,13 @@ module.exports = (settings) => {
         percentageTextStyle: {
             fontWeight: settings.percentageFontWeight || 'bold',
             fontSize: settings.percentageFontSize || '28px',
-            color: settings.pathColor || 'rgb(231, 83, 79)',
+            color: settings.primaryColour || '#e7534f',
             margin: 0
         },
         labelTextStyle: {
         	fontWeight: settings.labelFontWeight || 'normal',
-        	fontSize: settings.labelFontSize || '14px',
-            color: settings.labelColor || 'rgb(0, 0, 0)',
+        	fontSize: `${settings.labelFontSize}px` || '14px',
+            color: settings.labelColour || '#333',
             margin: 0
         },
 	};

@@ -11,6 +11,7 @@ class SvgDoughnut extends React.Component {
             appliedPercentage: 0
         };
         this.settings = configure(this.props.settings);
+        this.percentage = this.props.percentage || this.settings.percentage;
     }
 
     componentDidMount() {
@@ -18,19 +19,19 @@ class SvgDoughnut extends React.Component {
             this.animate();
         } else {
             this.setState({
-                appliedPercentage: this.settings.percentage
+                appliedPercentage: this.percentage
             });
         }
     }
 
     animate() {
         const self = this;
-        for(let i = 0; i < (this.settings.percentage + 1); i++){
+        for(let i = 0; i < (this.percentage + 1); i++){
             setTimeout(() => {
                 self.setState({
                     appliedPercentage: i
                 });
-            }, i * stepDuration(this.settings.percentage, this.settings.animationDuration));
+            }, i * stepDuration(this.percentage, this.settings.animationDuration));
         };
     }
 
