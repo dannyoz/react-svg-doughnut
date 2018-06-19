@@ -74,3 +74,4 @@ An optional object used to configure the following default settings:
 | percentageFontWeight   | String  | 'bold'        | Percentage font weight (valid css fontWeight string).                                                           |
 | percentage             | Number  | 0             | You can also define your percentage value here.  **Note:** the percentage prop takes precendence over this value. |
 
+License: [MIT](https://opensource.org/licenses/MIT) 
