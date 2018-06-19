@@ -59,19 +59,19 @@ The percentage displayed in the center and generating the completed section of t
 #### Settings (Object)
 An optional object used to configure the following default settings:
 
-| Setting                | Type    | Default Value | Description                                                                                                     |
-| ---------------------- | ------- | ------------- | --------------------------------------------------------------------------------------------------------------- |
-| size (px)              | Number  | 150           | Width and height of the graphic in pixels                                                                       |
-| thickness (px)         | Number  | 5             | Thickness of the graphic ring in pixels                                                                         |
-| animationDuration (ms) | Number  | -             | Optional duration of the generation animation in milliseconds. No animation is triggered when set to undefined. |
-| primaryColour          | String  | '#e7534f'     | Colour of the percentage and completion path of the graphic (valid css colour string).                          |
-| ringColour             | String  | '#DDD'        | Colour of the ring path of the graphic (valid css colour string).                                               |
-| labelText              | String  | -             | Optional label text displayed under the percentage value.                                                       |
-| labelColour            | String  | '#333'        | Colour of the optional label text (valid css colour string).                                                    |
-| labelFontSize          | Number  | 14            | Label font size in pixels.                                                                                      |
-| labelFontWeight        | String  | 'normal'      | Label font weight (valid css fontWeight string).                                                                |
-| percentageFontSize     | Number  | 28            | Percentage font size in pixels.                                                                                 |
-| percentageFontWeight   | String  | 'bold'        | Percentage font weight (valid css fontWeight string).                                                           |
-| percentage             | Number  | 0             | You can also define your percentage value here.  **Note:** the percentage prop takes precendence over this value. |
+| Setting                 | Type    | Default Value | Description                                                                                                       |
+| ----------------------- | ------- | ------------- | ----------------------------------------------------------------------------------------------------------------- |
+| size (px)               | Number  | 150           | Width and height of the graphic in pixels                                                                         |
+| thickness (px)          | Number  | 5             | Thickness of the graphic ring in pixels                                                                           |
+| animationDuration (ms)  | Number  | -             | Optional duration of the generation animation in milliseconds. No animation is triggered when set to undefined.   |
+| primaryColour           | String  | '#e7534f'     | Colour of the percentage and completion path of the graphic (valid css colour string).                            |
+| ringColour              | String  | '#DDD'        | Colour of the ring path of the graphic (valid css colour string).                                                 |
+| labelText               | String  | -             | Optional label text displayed under the percentage value.                                                         |
+| labelColour             | String  | '#333'        | Colour of the optional label text (valid css colour string).                                                      |
+| labelFontSize (px)      | Number  | 14            | Label font size in pixels.                                                                                        |
+| labelFontWeight         | String  | 'normal'      | Label font weight (valid css fontWeight string).                                                                  |
+| percentageFontSize (px) | Number  | 28            | Percentage font size in pixels.                                                                                   |
+| percentageFontWeight    | String  | 'bold'        | Percentage font weight (valid css fontWeight string).                                                             |
+| percentage              | Number  | 0             | You can also define your percentage value here.  **Note:** the percentage prop takes precendence over this value. |
 
 License: [MIT](https://opensource.org/licenses/MIT) 
