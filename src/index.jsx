@@ -1,6 +1,5 @@
 const React = require('react');
 const calculatePathShape = require('./utils/calculate-path-shape');
-const generateStyles = require('./utils/generate-styles');
 const configure = require('./utils/configure');
 const stepDuration = require('./utils/step-duration');
 

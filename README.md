@@ -30,7 +30,8 @@ class Example extends React.Component {
     render() {
         return(
             <div>
-                <SvgDoughnut percentage={100} settings={{
+                <SvgDoughnut settings={{
+                    percentage: 100,
                     labelText: 'Awesome!',
                     size: 200,
                     thickness: 5,
