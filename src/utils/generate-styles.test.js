@@ -4,7 +4,6 @@ test('Styles are generated correctly', () => {
 
     const test = generateStyles({
         size: 200,
-        thickness: 5,
         ringColour: 'red'
     });
 

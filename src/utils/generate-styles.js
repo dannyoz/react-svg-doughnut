@@ -6,7 +6,7 @@ module.exports = (settings) => {
         },
         sharedStyles: {
             fill: 'none',
-            strokeWidth: `${settings.thickness}px` || '5px',
+            strokeWidth: (settings.thickness) ? `${settings.thickness}px` : '5px',
         },
         circleStyle: {
             stroke: settings.ringColour || '#DDD',
@@ -24,13 +24,13 @@ module.exports = (settings) => {
         },
         percentageTextStyle: {
             fontWeight: settings.percentageFontWeight || 'bold',
-            fontSize: settings.percentageFontSize || '28px',
+            fontSize: (settings.percentageFontSize) ? `${settings.percentageFontSize}px` : '28px',
             color: settings.primaryColour || '#e7534f',
             margin: 0
         },
         labelTextStyle: {
         	fontWeight: settings.labelFontWeight || 'normal',
-        	fontSize: `${settings.labelFontSize}px` || '14px',
+        	fontSize: (settings.labelFontSize) ? `${settings.labelFontSize}px` : '14px',
             color: settings.labelColour || '#333',
             margin: 0
         },
