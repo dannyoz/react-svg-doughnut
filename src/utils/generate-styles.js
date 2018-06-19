@@ -1,12 +1,12 @@
 module.exports = (settings) => {
 	return {
 		svgStyle: {
-            width: `${settings.size}px`,
-            height: `${settings.size}px`
+            width: `${settings.size}px` || '150px',
+            height: `${settings.size}px` || '150px'
         },
         sharedStyles: {
             fill: 'none',
-            strokeWidth: `${settings.thickness}px`,
+            strokeWidth: `${settings.thickness}px` || '5px',
         },
         circleStyle: {
             stroke: settings.circleColor || 'rgba(0, 0, 0, 0.15)',

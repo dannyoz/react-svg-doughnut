@@ -1,7 +1,7 @@
 const generateStyles = require('./generate-styles');
 module.exports = (settings) => {
     return {
-        styles: generateStyles(settings),
+        styles: generateStyles(settings || {}),
         labelText: settings.labelText,
         animationDuration: settings.animationDuration,
         percentage: settings.percentage || 0,
