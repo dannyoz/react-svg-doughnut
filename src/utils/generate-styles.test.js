@@ -4,27 +4,26 @@ test('Styles are generated correctly', () => {
 
     const test = generateStyles({
         size: 200,
-        thickness: 5,
-        pathColor: 'red'
+        ringColour: 'red'
     });
 
     expect(test.circleStyle).toEqual({
-        "stroke": "rgba(0, 0, 0, 0.15)"
+        "stroke": "red"
     });
 
     expect(test.labelTextStyle).toEqual({
-        "color": "rgb(0, 0, 0)",
+        "color": "#333",
         "fontSize": "14px",
         "fontWeight": "normal",
         "margin": 0
     });
 
     expect(test.pathStyle).toEqual({
-        "stroke": "red"
+        "stroke": "#e7534f"
     });
 
     expect(test.percentageTextStyle).toEqual({
-        "color": "red",
+        "color": "#e7534f",
         "fontSize": "28px",
         "fontWeight": "bold",
         "margin": 0
