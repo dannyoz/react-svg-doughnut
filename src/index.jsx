@@ -26,12 +26,12 @@ class SvgDoughnut extends React.Component {
 
     animate() {
         const self = this;
-        for(let i = 0; i < (this.percentage + 1); i++){
+        for(let index = 0; index < (this.percentage + 1); index ++){
             setTimeout(() => {
                 self.setState({
-                    appliedPercentage: i
+                    appliedPercentage: index
                 });
-            }, i * stepDuration(this.percentage, this.settings.animationDuration));
+            }, index * stepDuration(this.percentage, this.settings.animationDuration));
         };
     }
 
