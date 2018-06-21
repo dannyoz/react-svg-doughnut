@@ -1,7 +1,7 @@
 React SVG doughnut
 =====================
 
-A flexible, lightweight React component for SVG doughnut charts made easy!
+A flexible, lightweight React component for SVG doughnut graphics made easy!
 
 ---
 
@@ -36,7 +36,7 @@ class Example extends React.Component {
                     thickness: 5,
                     primaryColour: '#e7534f',
                     ringColour: '#DDD',
-                    labelColur: '#333',
+                    labelColour: '#333',
                     animationDuration: 1000
                 }}/>
             </div>
@@ -60,7 +60,7 @@ The percentage displayed in the center and generating the completed section of t
 An optional object used to configure the following default settings:
 
 | Setting                 | Type    | Default Value | Description                                                                                                       |
-| ----------------------- | ------- | ------------- | ----------------------------------------------------------------------------------------------------------------- |
+| ----------------------- | ------- | :-----------: | ----------------------------------------------------------------------------------------------------------------- |
 | size (px)               | Number  | 150           | Width and height of the graphic in pixels                                                                         |
 | thickness (px)          | Number  | 5             | Thickness of the graphic ring in pixels                                                                           |
 | animationDuration (ms)  | Number  | -             | Optional duration of the generation animation in milliseconds. No animation is triggered when set to undefined.   |
@@ -74,4 +74,4 @@ An optional object used to configure the following default settings:
 | percentageFontWeight    | String  | 'bold'        | Percentage font weight (valid css fontWeight string).                                                             |
 | percentage              | Number  | 0             | You can also define your percentage value here.  **Note:** the percentage prop takes precendence over this value. |
 
-License: [MIT](https://opensource.org/licenses/MIT) 
+License: [MIT](https://opensource.org/licenses/MIT)
