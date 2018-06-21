@@ -36,7 +36,7 @@ class Example extends React.Component {
                     thickness: 5,
                     primaryColour: '#e7534f',
                     ringColour: '#DDD',
-                    labelColur: '#333',
+                    labelColour: '#333',
                     animationDuration: 1000
                 }}/>
             </div>
