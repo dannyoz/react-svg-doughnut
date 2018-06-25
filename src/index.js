@@ -53,7 +53,7 @@ class SvgDoughnut extends React.Component {
                     )
                 ), 
                 React.createElement("div", {style: Object.assign({}, this.settings.styles.textWrapperStyle)}, 
-                    React.createElement("p", {style: Object.assign({}, this.settings.styles.percentageTextStyle)}, `${display}`), 
+                    React.createElement("p", {style: Object.assign({}, this.settings.styles.percentageTextStyle)}, `${this.state.display}`), 
                     this.settings.labelText && React.createElement("p", {style: Object.assign({}, this.settings.styles.labelTextStyle)}, this.settings.labelText)
                 )
             )

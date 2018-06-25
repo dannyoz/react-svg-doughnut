@@ -53,7 +53,7 @@ class SvgDoughnut extends React.Component {
                     </path>
                 </svg>
                 <div style={Object.assign({}, this.settings.styles.textWrapperStyle )}>
-                    <p style={Object.assign({}, this.settings.styles.percentageTextStyle)} >{`${display}`}</p>
+                    <p style={Object.assign({}, this.settings.styles.percentageTextStyle)} >{`${this.state.display}`}</p>
                     {this.settings.labelText && <p style={Object.assign({}, this.settings.styles.labelTextStyle)}>{this.settings.labelText}</p>}
                 </div>
             </div>
