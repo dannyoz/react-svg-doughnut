@@ -15,7 +15,7 @@ module.exports = (settings) => {
             stroke: settings.primaryColour || '#e7534f',
         },
         textWrapperStyle: {
-            fontFamily: settings.fontFamily || 'sans-serif',
+            fontFamily: settings.fontFamily || 'inherit',
             position: 'absolute',
             left: '50%',
             top: '50%',

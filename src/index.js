@@ -8,7 +8,8 @@ class SvgDoughnut extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            appliedPercentage: 0
+            appliedPercentage: 0,
+            display: 0
         };
         this.settings = configure(this.props.settings);
         this.percentage = this.props.percentage || this.settings.percentage;
@@ -29,7 +30,8 @@ class SvgDoughnut extends React.Component {
         for(let index = 0; index < (this.percentage + 1); index ++){
             setTimeout(() => {
                 self.setState({
-                    appliedPercentage: index
+                    appliedPercentage: index,
+                    display: index
                 });
             }, index * stepDuration(this.percentage, this.settings.animationDuration));
         };
@@ -51,7 +53,7 @@ class SvgDoughnut extends React.Component {
                     )
                 ), 
                 React.createElement("div", {style: Object.assign({}, this.settings.styles.textWrapperStyle)}, 
-                    React.createElement("p", {style: Object.assign({}, this.settings.styles.percentageTextStyle)}, `${this.state.appliedPercentage}%`), 
+                    React.createElement("p", {style: Object.assign({}, this.settings.styles.percentageTextStyle)}, `${this.state.display}`), 
                     this.settings.labelText && React.createElement("p", {style: Object.assign({}, this.settings.styles.labelTextStyle)}, this.settings.labelText)
                 )
             )
