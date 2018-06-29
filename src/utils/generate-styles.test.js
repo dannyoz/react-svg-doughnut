@@ -40,7 +40,7 @@ test('Styles are generated correctly', () => {
     });
 
     expect(test.textWrapperStyle).toEqual({
-        "fontFamily": "sans-serif",
+        "fontFamily": "inherit",
         "left": "50%",
         "position": "absolute",
         "textAlign": "center",

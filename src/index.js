@@ -2,6 +2,8 @@ const React = require('react');
 const calculatePathShape = require('./utils/calculate-path-shape');
 const configure = require('./utils/configure');
 const stepDuration = require('./utils/step-duration');
+const calculatePercentage = require('./utils/calculate-percentage');
+const format = require('./utils/format');
 
 class SvgDoughnut extends React.Component {
 
@@ -12,7 +14,7 @@ class SvgDoughnut extends React.Component {
             display: 0
         };
         this.settings = configure(this.props.settings);
-        this.percentage = this.props.percentage || this.settings.percentage;
+        this.percentage = calculatePercentage(this.settings);
     }
 
     componentDidMount() {
@@ -20,7 +22,8 @@ class SvgDoughnut extends React.Component {
             this.animate();
         } else {
             this.setState({
-                appliedPercentage: this.percentage
+                appliedPercentage: this.percentage,
+                display: format(this.settings, this.percentage)
             });
         }
     }
@@ -31,7 +34,7 @@ class SvgDoughnut extends React.Component {
             setTimeout(() => {
                 self.setState({
                     appliedPercentage: index,
-                    display: index
+                    display: format(this.settings, index)
                 });
             }, index * stepDuration(this.percentage, this.settings.animationDuration));
         };
@@ -53,8 +56,9 @@ class SvgDoughnut extends React.Component {
                     )
                 ), 
                 React.createElement("div", {style: Object.assign({}, this.settings.styles.textWrapperStyle)}, 
+                    (this.settings.labelText && this.settings.labelPosition === 'top') && React.createElement("p", {style: Object.assign({}, this.settings.styles.labelTextStyle)}, this.settings.labelText), 
                     React.createElement("p", {style: Object.assign({}, this.settings.styles.percentageTextStyle)}, `${this.state.display}`), 
-                    this.settings.labelText && React.createElement("p", {style: Object.assign({}, this.settings.styles.labelTextStyle)}, this.settings.labelText)
+                    (this.settings.labelText && this.settings.labelPosition === 'bottom') && React.createElement("p", {style: Object.assign({}, this.settings.styles.labelTextStyle)}, this.settings.labelText)
                 )
             )
         );

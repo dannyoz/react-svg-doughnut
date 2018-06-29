@@ -8,10 +8,14 @@ const defaults = {
 module.exports = (settings = defaults) => {
     return {
         styles: generateStyles(settings || {}),
+        labelPosition: settings.labelPosition || 'bottom',
         labelText: settings.labelText,
         animationDuration: settings.animationDuration,
         percentage: settings.percentage,
         size: settings.size,
-        thickness: settings.thickness
+        thickness: settings.thickness,
+        value: settings.value,
+        ceiling: settings.ceiling,
+        format: settings.format || 'percentage'
     };
 };
