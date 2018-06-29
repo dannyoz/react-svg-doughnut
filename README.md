@@ -68,10 +68,13 @@ An optional object used to configure the following default settings:
 | ringColour              | String  | '#DDD'        | Colour of the ring path of the graphic (valid css colour string).                                                 |
 | labelText               | String  | -             | Optional label text displayed under the percentage value.                                                         |
 | labelColour             | String  | '#333'        | Colour of the optional label text (valid css colour string).                                                      |
+| labelPosition           | String  | 'bottom'      | Position of the optional label. 'top' or 'bottom'                                                                 |
 | labelFontSize (px)      | Number  | 14            | Label font size in pixels.                                                                                        |
 | labelFontWeight         | String  | 'normal'      | Label font weight (valid css fontWeight string).                                                                  |
 | percentageFontSize (px) | Number  | 28            | Percentage font size in pixels.                                                                                   |
 | percentageFontWeight    | String  | 'bold'        | Percentage font weight (valid css fontWeight string).                                                             |
 | value                   | Number  | 0             | You can also define your value here.  **Note:** the value prop takes precendence over this.                       |
+| ceiling                 | Number  | 100           | The ceiling used to calculate the percentage / fraction                                                           |
+| format                  | String  | 'percentage'  | The format displayed. 'percentage' or 'fraction'                                                                  |
 
 License: [MIT](https://opensource.org/licenses/MIT)
