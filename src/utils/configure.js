@@ -14,7 +14,6 @@ module.exports = (settings = defaults) => {
         percentage: settings.percentage,
         size: settings.size,
         thickness: settings.thickness,
-        value: settings.value,
         ceiling: settings.ceiling,
         format: settings.format || 'percentage'
     };

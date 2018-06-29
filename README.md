@@ -30,7 +30,7 @@ class Example extends React.Component {
     render() {
         return(
             <div>
-                <SvgDoughnut percentage={100} settings={{
+                <SvgDoughnut value={100} settings={{
                     labelText: 'Awesome!',
                     size: 200,
                     thickness: 5,
@@ -53,8 +53,8 @@ ReactDOM.render(
 
 React SVG doughnut uses two props to build the graphic.
 
-#### Percentage (Number)
-The percentage displayed in the center and generating the completed section of the graphic. **Note:** This prop is optional, percentage can also be set in the settings object - see below.
+#### value (Number)
+The value used to calculate the percentage / fraction displayed in the center and generating the completed section of the graphic. **Note:** This prop is optional, value can also be set in the settings object - see below.
 
 #### Settings (Object)
 An optional object used to configure the following default settings:
@@ -72,6 +72,6 @@ An optional object used to configure the following default settings:
 | labelFontWeight         | String  | 'normal'      | Label font weight (valid css fontWeight string).                                                                  |
 | percentageFontSize (px) | Number  | 28            | Percentage font size in pixels.                                                                                   |
 | percentageFontWeight    | String  | 'bold'        | Percentage font weight (valid css fontWeight string).                                                             |
-| percentage              | Number  | 0             | You can also define your percentage value here.  **Note:** the percentage prop takes precendence over this value. |
+| value                   | Number  | 0             | You can also define your value here.  **Note:** the value prop takes precendence over this.                       |
 
 License: [MIT](https://opensource.org/licenses/MIT)
