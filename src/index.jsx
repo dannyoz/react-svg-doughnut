@@ -13,8 +13,7 @@ class SvgDoughnut extends React.Component {
             appliedPercentage: 0,
             display: 0
         };
-        this.settings = configure(this.props.settings);
-        this.settings.value = this.props.value || this.props.settings.value;
+        this.settings = configure(this.props);
         this.percentage = calculatePercentage(this.settings);
     }
 
