@@ -3,13 +3,13 @@ module.exports = (settings, val) => {
     let display;
     switch (format) {
         case 'percentage':
-            display = `${val}%`
+            display = `${Math.round(val)}%`
             break;
         case 'fraction':
             display = `${settings.value} / ${settings.ceiling}`
             break;
         default:
-            display = `${val}%`
+            display = `${Math.round(val)}%`
     }
 
     return display;

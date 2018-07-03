@@ -1,6 +1,6 @@
 {
   "name": "react-svg-doughnut",
-  "version": "3.0.0",
+  "version": "3.2.0",
   "description": "A React component for SVG doughnut charts made easy!",
   "main": "src/index.js",
   "scripts": {

@@ -37,7 +37,7 @@ class Example extends React.Component {
         };
 
         return(
-            <div className="home">
+            <div>
                 <SvgDoughnut {...settings}/>
             </div>
         );
