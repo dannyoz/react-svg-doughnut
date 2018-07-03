@@ -1,21 +1,21 @@
 module.exports = (settings) => {
 	return {
 		svgStyle: {
-            width: `${settings.size}px` || '150px',
-            height: `${settings.size}px` || '150px'
+            width: (settings.size) ? `${settings.size}px` : '150px',
+            height: (settings.size) ? `${settings.size}px` : '150px'
         },
         sharedStyles: {
             fill: 'none',
             strokeWidth: (settings.thickness) ? `${settings.thickness}px` : '5px',
         },
         circleStyle: {
-            stroke: settings.ringColour || '#DDD',
+            stroke: (settings.ringColour) ? settings.ringColour : '#DDD',
         },
         pathStyle: {
-            stroke: settings.primaryColour || '#e7534f',
+            stroke: (settings.primaryColour) ? settings.primaryColour : '#e7534f',
         },
         textWrapperStyle: {
-            fontFamily: settings.fontFamily || 'inherit',
+            fontFamily: (settings.fontFamily) ? settings.fontFamily : 'inherit',
             position: 'absolute',
             left: '50%',
             top: '50%',
@@ -23,15 +23,15 @@ module.exports = (settings) => {
             textAlign: 'center'
         },
         percentageTextStyle: {
-            fontWeight: settings.percentageFontWeight || 'bold',
+            fontWeight: (settings.percentageFontWeight) ? settings.percentageFontWeight : 'bold',
             fontSize: (settings.percentageFontSize) ? `${settings.percentageFontSize}px` : '28px',
-            color: settings.primaryColour || '#e7534f',
+            color: (settings.primaryColour) ? settings.primaryColour : '#e7534f',
             margin: 0
         },
         labelTextStyle: {
-        	fontWeight: settings.labelFontWeight || 'normal',
+        	fontWeight: (settings.labelFontWeight) ? settings.labelFontWeight : 'normal',
         	fontSize: (settings.labelFontSize) ? `${settings.labelFontSize}px` : '14px',
-            color: settings.labelColour || '#333',
+            color: (settings.labelColour) ? settings.labelColour : '#333',
             margin: 0
         },
 	};
