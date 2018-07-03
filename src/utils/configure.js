@@ -10,13 +10,13 @@ const defaults = {
 module.exports = (settings = defaults) => {
     return {
         styles: generateStyles(settings || {}),
-        labelPosition: settings.labelPosition,
+        labelPosition: settings.labelPosition || 'bottom',
         labelText: settings.labelText,
         animationDuration: settings.animationDuration,
-        value: settings.value,
-        size: settings.size,
-        thickness: settings.thickness,
-        ceiling: settings.ceiling,
-        format: settings.format
+        value: settings.value || 0,
+        size: settings.size || 150,
+        thickness: settings.thickness || 5,
+        ceiling: settings.ceiling || 100,
+        format: settings.format || 'percentage'
     };
 };
